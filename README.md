@@ -5,14 +5,14 @@
 - premium versus free app 
 - tutorial video 
 
-### Map - 
+### Map - Salma
 - GPS Sensor 
 - only present relevant pins in the map 
 - Description about location 
 - search location/address/city
 
 
-### Settings & Main Menu 
+### Settings & Main Menu - Cathy 
 - notifications 
 - user feedback messsaging 
 - change language feature 
@@ -21,9 +21,10 @@
 - privacy and user terms 
 
 
-### Lessons, badges, immigration guide 
+### Lessons, badges, immigration guide - Isabel 
 - Quiz feature 
 - Progress bar 
 - Notification for new badge 
 -  check box 
--  Logic for going to next leevl 
+-  Logic for going to next level 
+-  links  
