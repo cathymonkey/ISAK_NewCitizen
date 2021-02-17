@@ -10,6 +10,7 @@
 - only present relevant pins in the map 
 - Description about location 
 - search location/address/city
+- save location 
 
 
 ### Settings & Main Menu - Cathy 
