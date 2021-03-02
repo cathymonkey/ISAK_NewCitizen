@@ -398,6 +398,122 @@ shape.xml
         android:bottomRightRadius="10dp"/>
 </shape>
 ```
+Android Manifest
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quiz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Quiz">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".QuizMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+
+Quiz Menu (second activity) 
+```
+package com.example.quiz;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+import android.view.View;
+import android.widget.Toast;
+
+
+public class QuizMenu extends AppCompatActivity {
+    private Button recyclingquiz;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz_menu2);
+
+        recyclingquiz = (Button) findViewById(R.id.trash_recyling_button);
+        recyclingquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotofirstquiz();
+
+            }
+        });
+    }
+
+    private void gotofirstquiz() {
+        android.content.Intent intent = new android.content.Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+}
+``` 
+
+activity_quiz.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background = "#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizMenu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text = "Lessons"
+        android:textSize="25dp"
+        android:gravity = "center"
+        android:textColor="@color/white"
+        android:background = "@color/blue"
+        />
+
+    <Button
+        android:id = "@+id/trash_recyling_button"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/lesson_enter_shapes"
+        android:gravity="center_vertical"
+        android:padding = "15dp"
+        android:text="Trash Recyling"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+</FrameLayout>
+```
+
+Lesson_enter_shapes: 
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape = "rectangle">
+
+    <solid android:color="@color/orange"/>
+    <size android:width="300dp"
+        android:height="70dp"/>
+
+    <corners android:radius = "30dp" />
+
+</shape>
+``` 
 
 
 - Progress bar 
