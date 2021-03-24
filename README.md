@@ -12,7 +12,7 @@
 - search location/address/city
 - save location <br>
 
-This is the code for a basic app that just shows a map and one pin as an example. I did not get the chance to test it as I messed up something and now Android Studio does not want to work... I will try to figure out the problem but meanwhile i would appreciate if someone could test it thank you!
+This is the code for a basic app that just shows a map and one pin as an example. I did not get the chance to test it as I messed up something and now Android Studio does not want to work... To fix this I need to download something that will take a few hours but meanwhile i would appreciate if someone could test it thank you!
 ```package com.example.quiz;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
