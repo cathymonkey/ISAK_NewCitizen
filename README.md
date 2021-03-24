@@ -10,8 +10,51 @@
 - only present relevant pins in the map 
 - Description about location 
 - search location/address/city
-- save location 
+- save location <br>
 
+This is the code for a basic app that just shows a map and one pin as an example. I did not get the chance to test it as I messed up something and now Android Studio does not want to work... I will try to figure out the problem but meanwhile i would appreciate if someone could test it thank you!
+```package com.example.quiz;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+
+    private GoogleMap mMap;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.basic_demo);
+        setUpMapIfNeeded();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUpMapIfNeeded();
+    }
+
+    private void setUpMapIfNeeded() {
+        if (mMap == null) {
+            // Try to obtain the map from the SupportMapFragment.
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+                    .getMap();
+            if (mMap != null) {
+                setUpMap();
+            }
+        }
+    }
+
+    private void setUpMap() {
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+    }
+}
+
+```
 
 ### Settings & Main Menu - Cathy 
 - notifications 
